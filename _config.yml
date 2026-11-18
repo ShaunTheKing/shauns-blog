@@ -1,0 +1,14 @@
+title: Shaun's Blog
+description: Thoughts, notes, and things I'm working on.
+author: Shaun
+baseurl: "/shauns-blog"
+url: "https://shauntheking.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+minima:
+  social_links:
+    github: ShaunTheKing
+header_pages:
+  - about.md
