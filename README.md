@@ -22,4 +22,4 @@ Push to `main` and GitHub Pages rebuilds the site automatically.
 
 - `_config.yml`: site title, description, links
 - `about.md`: the About page
-- Theme: [minima](https://github.com/jekyll/minima)
+- Design: custom layouts in `_layouts/` and styles in `assets/css/style.css`
