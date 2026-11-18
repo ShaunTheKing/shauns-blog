@@ -3,11 +3,12 @@ layout: default
 ---
 <article class="article">
   <header class="article-head">
+    {% if page.categories contains 'ai-news' %}<a class="badge" href="{{ '/ai-news/' | relative_url }}">Weekly AI News</a>{% endif %}
     <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     <h1>{{ page.title }}</h1>
   </header>
   <div class="prose">
     {{ content }}
   </div>
-  <a class="back" href="{{ '/' | relative_url }}">‹ All posts</a>
+  {% if page.categories contains 'ai-news' %}<a class="back" href="{{ '/ai-news/' | relative_url }}">‹ All AI News</a>{% else %}<a class="back" href="{{ '/' | relative_url }}">‹ All posts</a>{% endif %}
 </article>

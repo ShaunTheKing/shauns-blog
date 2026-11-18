@@ -9,7 +9,10 @@ layout: default
 <section class="posts">
   {% for post in site.posts %}
   <a class="card" href="{{ post.url | relative_url }}">
-    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    <div class="card-meta">
+      {% if post.categories contains 'ai-news' %}<span class="badge">Weekly AI News</span>{% endif %}
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+    </div>
     <h2>{{ post.title }}</h2>
     <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
     <span class="more">Read more ›</span>
